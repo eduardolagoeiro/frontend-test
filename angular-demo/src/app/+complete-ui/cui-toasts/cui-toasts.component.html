@@ -1,0 +1,42 @@
+<div class="ui-block">
+  <h3 class="ui-block-heading">Bootstrap 4 toasts</h3>
+
+  <h4 class="ui-block-heading">Default</h4>
+
+  <div class="cui-example">
+
+    <div class="bs4-toast toast show" [ngClass]="toast.variant" *ngFor="let toast of bs4Toasts">
+      <div class="toast-header">
+        <img [src]="toast.avatar" class="d-block ui-w-20 rounded mr-2" alt="">
+        <div class="font-weight-bold mr-auto">{{ toast.title }}</div>
+        <div class="d-block small">{{ toast.time }}</div>
+        <button type="button" class="close d-block mb-1 ml-2" (click)="closeBs4Toast(toast)">&times;</button>
+      </div>
+      <div class="toast-body">
+        {{ toast.message }}
+      </div>
+    </div>
+
+  </div>
+
+  <h4 class="ui-block-heading">Translucent</h4>
+
+  <div class="cui-example">
+    <div class="ui-bg-cover ui-bg-overlay-container p-4" style="background-image: url('assets/img/bg/1.jpg');">
+      <div class="ui-bg-overlay bg-dark opacity-50"></div>
+
+      <div class="bs4-toast toast show" [ngClass]="toast.variant" *ngFor="let toast of translucentBs4Toasts">
+        <div class="toast-header">
+          <img [src]="toast.avatar" class="d-block ui-w-20 rounded mr-2" alt="">
+          <div class="font-weight-bold mr-auto">{{ toast.title }}</div>
+          <div class="d-block small">{{ toast.time }}</div>
+          <button type="button" class="close d-block mb-1 ml-2" (click)="closeTranslucentBs4Toast(toast)">&times;</button>
+        </div>
+        <div class="toast-body">
+          {{ toast.message }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

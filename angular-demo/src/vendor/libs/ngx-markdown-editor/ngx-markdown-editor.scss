@@ -1,0 +1,218 @@
+:host /deep/ div.md-editor-container[class] {
+  background: #fff;
+}
+
+:host /deep/ div.md-editor-container[class] div.md-layout[class] {
+  .editor-container {
+    flex-direction: column;
+  }
+
+  .tool-bar {
+    background-color: #fff;
+  }
+
+  .md-footer {
+    z-index: auto;
+    background-color: transparent;
+  }
+
+  .editor-container {
+    position: relative;
+
+     > div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  // Font Awesome 5
+  .fa.fa-header::before {
+    content: unquote("\"\f1dc\"");
+  }
+  .fa.fa-file-code-o::before {
+    content: unquote("\"\f121\"");
+  }
+
+  [dir=rtl] & .pull-right {
+    float: left !important;
+  }
+
+  [dir=rtl] & .tool-bar .btn-group > .btn:first-child::before {
+    right: -9px;
+    left: auto !important;
+  }
+}
+
+:host /deep/ div.md-editor-container[class].fullscreen div.md-layout[class] {
+  .editor-container > div:last-child {
+    position: static;
+    z-index: 1;
+    height: 100%;
+    transform: none;
+  }
+
+  .md-footer {
+    z-index: 5;
+    background-color: #fff;
+  }
+}
+
+.default-style :host /deep/ div.md-editor-container[class] {
+  @import "~vendor/styles/_appwork/include";
+
+  border-color: $input-border-color;
+
+  &.fullscreen {
+    z-index: $zindex-modal-top;
+  }
+
+  .tool-bar {
+    border-bottom: 1px dashed $input-border-color;
+
+    @include clearfix();
+  }
+
+  .md-footer {
+    border-top: 1px dashed $input-border-color;
+  }
+
+  .ace_gutter {
+    background: $gray-100;
+    color: $text-muted;
+  }
+
+  .ace_gutter-active-line {
+    background: $gray-100;
+  }
+
+  .preview-panel {
+    border-color: $input-border-color !important;
+    border-top: 1px solid;
+  }
+
+  .tool-bar .btn-group > .btn:first-child::before {
+    background-color: $input-border-color !important;
+  }
+
+  @media (max-width: (map-get($grid-breakpoints, md) - 1)) {
+    &.fullscreen {
+      .editor-panel,
+      .preview-panel {
+        border: 0 !important;
+      }
+
+      .editor-container > div:last-child {
+        position: relative;
+        z-index: 10;
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    div.editor-container[class] {
+      flex-direction: row;
+    }
+
+    div.preview-panel[class] {
+      border-top-width: 0;
+      border-left-width: 1px;
+    }
+
+    div.md-layout[class] .editor-container > div {
+      position: static;
+    }
+  }
+}
+
+.default-style[dir=rtl] :host /deep/ div.md-editor-container[class] {
+  @import "~vendor/styles/_appwork/include";
+  @include media-breakpoint-up(md) {
+    .preview-panel {
+      border-right: 1px solid;
+      border-left-width: 0;
+    }
+  }
+}
+
+.material-style :host /deep/ div.md-editor-container[class] {
+  @import "~vendor/styles/_appwork/include-material";
+  
+  border-color: $input-border-color;
+
+  &.fullscreen {
+    z-index: $zindex-modal-top;
+  }
+
+  .tool-bar {
+    border-bottom: 1px dashed $input-border-color;
+
+    @include clearfix();
+  }
+
+  .md-footer {
+    border-top: 1px dashed $input-border-color;
+  }
+
+  .ace_gutter {
+    background: $gray-100;
+    color: $text-muted;
+  }
+
+  .ace_gutter-active-line {
+    background: $gray-100;
+  }
+
+  .preview-panel {
+    border-color: $input-border-color !important;
+    border-top: 1px solid;
+  }
+
+  .tool-bar .btn-group > .btn:first-child::before {
+    background-color: $input-border-color !important;
+  }
+
+  @media (max-width: (map-get($grid-breakpoints, md) - 1)) {
+    &.fullscreen {
+      .editor-panel,
+      .preview-panel {
+        border: 0 !important;
+      }
+
+      .editor-container > div:last-child {
+        position: relative;
+        z-index: 10;
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    div.editor-container[class] {
+      flex-direction: row;
+    }
+
+    div.preview-panel[class] {
+      border-top-width: 0;
+      border-left-width: 1px;
+    }
+
+    div.md-layout[class] .editor-container > div {
+      position: static;
+    }
+  }
+}
+
+.material-style[dir=rtl] :host /deep/ div.md-editor-container[class] {
+  @import "~vendor/styles/_appwork/include-material";
+  @include media-breakpoint-up(md) {
+    .preview-panel {
+      border-right: 1px solid;
+      border-left-width: 0;
+    }
+  }
+}
