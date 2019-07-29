@@ -1,6 +1,6 @@
 # frontend-test
 
-Olá, Temos um desafio para te propor. Gostaríamos de desenvolver de um dashboard de um método de pagamento. Você tem liberdade para criar uma interface e colocar os elementos que desejar, no mínimo a interface deve ter:
+Olá, Temos um desafio para te propor. Gostaríamos de desenvolver uma dashboard de um método de pagamento. Você tem liberdade para criar uma interface e colocar os elementos que desejar, no mínimo a interface deve ter:
 
 - Lista com as compras do usuário
 - Filtro por data da compra
