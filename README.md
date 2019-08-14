@@ -7,7 +7,7 @@ Olá, Temos um desafio para te propor. Gostaríamos de desenvolver uma dashboard
 - Gráfico das compras (valor x tempo)
 
 
-Template: https://uxpowered.com/products/appwork/v131/ (os arquivos esto no repositório)
+Template: https://uxpowered.com/products/appwork/v131/ (os arquivos estão no repositório)
 
 Entrega: fork do repositório
 
